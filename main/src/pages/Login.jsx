@@ -28,7 +28,6 @@ function Login() {
             setErrorMessage('メールアドレスかパスワードが違います');
         }
     };
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
     return (
         <main>

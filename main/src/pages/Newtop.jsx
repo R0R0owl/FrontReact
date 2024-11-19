@@ -35,8 +35,9 @@ function MainMenu() {
             </Link>
           </div>
           <div className="henkan-button">
-            <Link to={}
-            <button id="henkan-button" type="button">AI変換</button>
+            <Link to="/ai">
+              <button id="henkan-button" type="button">AI変換</button>
+            </Link>
           </div>
         </div>
       </div>
