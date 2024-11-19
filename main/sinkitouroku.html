@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>sinkitouroku page</title>
+</head>
+<body>
+    <main>
+        <section class="sinkitouroku">
+            <div class="page-title">
+                <div class="return">
+                    <a href="top.html">
+                        <img src="assets/img/return.png" alt="return">
+                    </a>
+                </div>
+                <h2 id="page-title">新規登録</h2>
+            </div>
+            <form action="newtop.html" id="tourokujouhou" method="post">
+                <div class="tourokujouhou">
+                    <label for="user-name" id="touroku-name">ユーザネーム</label><br>
+                    <input type="text" id="touroku-user-name" name="touroku-user-name" required>
+                </div>
+                <div class="tourokujouhou">
+                    <label for="mail-address" id="touroku-mail">メールアドレス</label><br>
+                    <input type="text" id="touroku-mail-address" name="touroku-mail-address" required>
+                </div>
+                <div class="tourokujouhou">
+                    <label for="password" id="touroku-pass">パスワード</label><br>
+                    <input type="password" id="touroku-password" name="touroku-password" required>
+                </div>
+                <div class="tourokujouhou">
+                    <label for="password" id="kakunin-pass">パスワード(確認)</label><br>
+                    <input type="password" id="kakunin-password" name="kakunin-password" required>
+                </div>
+                <div class="touroku">
+                    <button id="touroku" type="submit">新規作成</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

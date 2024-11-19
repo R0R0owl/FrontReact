@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>top page</title>
+</head>
+<body>
+    <main>
+        <div class="new-title-section">
+            <div class="title-background">
+                <div class="title-box">
+                    <div class="title">
+                        <img src="assets/img/title.png" id="title" alt="title">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-container">
+            <form action="newtop.html" method="post">
+                <div class="form-group">
+                    <label for="mail-address" id="mail">メールアドレス</label><br>
+                    <input type="text" id="mail-address" name="mail-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" id="pass">パスワード</label><br>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="login">
+                    <button id="login" type="submit">ログイン</button>
+                </div>
+            </form>
+        </div>
+        <div class="sinki-container">
+            <form action="sinkitouroku.html" method="post">
+                <button id="sinki" type="submit">新規登録</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
