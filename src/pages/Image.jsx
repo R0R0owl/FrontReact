@@ -1,22 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'; 
+
 
 const Image = () => {
     const images = [
-        "./src/assets/img/honnouji.jpg",
-        "./src/assets/img/honnouji.jpg",
-        "./src/assets/img/honnouji.jpg",
-        "./src/assets/img/honnouji.jpg",
-        "./src/assets/img/honnouji.jpg",
+        "src/assets/img/honnouji.jpg",
+        "src/assets/img/honnouji.jpg",
+        "src/assets/img/honnouji.jpg",
+        "src/assets/img/honnouji.jpg",
+        "src/assets/img/honnouji.jpg"
     ];
+
+        // ページを再読み込みする関数
+        const handleReload = () => {
+            window.location.reload();
+        };
 
     return (
         <main>
             <section className="illust-itiran">
                 <div className="page-title">
                     <div className="return">
-                        <Link to="/Mainhome">
-                            <img src="./src/assets/img/return.png" alt="return" />
+                        <Link to="/">
+                            <img src="src/assets/img/return.png" alt="return" />
                         </Link>
                     </div>
                     <h2 id="page-title">イラスト一覧</h2>
@@ -28,7 +34,8 @@ const Image = () => {
                         {images.map((img, index) => (
                             <div className="il-img" key={index}>
                                 <Link to="/detailed">
-                                    <img src={img} alt="illust" id={index % 2 === 0 ? "ai" : ""} />
+                                    {/* ai で変換したものをidで色を変化させる */}
+                                    <img src={img} alt="illust" id={Math.random() > 0.5 ? "ai" : ""} />
                                 </Link>
                             </div>
                         ))}
@@ -41,13 +48,19 @@ const Image = () => {
                         {images.map((img, index) => (
                             <div className="il-img" key={index}>
                                 <Link to="/detailed">
-                                    <img src={img} alt="illust" id={index % 2 === 0 ? "ai" : ""} />
+                                    <img src={img} alt="illust" id={index % 3 === 0 ? "ai" : ""} />
                                 </Link>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+            
+            <div className="illust-change">
+                <button onClick={handleReload} className="illust-change-button">
+                    <img src="./src/assets/img/change.png" alt="change" />
+                </button>
+            </div>
         </main>
     );
 };

@@ -7,7 +7,7 @@ function IjinItiran() {
       <section className="ijin-itiran">
         <div className="page-title">
           <div className="return">
-            <Link to="/Mainhome">
+            <Link to="/">
               <img src="./src/assets/img/return.png" alt="return" />
             </Link>
           </div>
@@ -18,7 +18,7 @@ function IjinItiran() {
           <div className="ijin-sintyoku"><p>☑</p></div>
           <div className="ijin-name"><p>古墳時代</p></div>
           <div className="ijin-yajirusi">
-            <Link to="/Ijin"><p>&gt;</p></Link>
+            <Link to="#"><p>&gt;</p></Link>
           </div>
         </div>
 
@@ -26,7 +26,7 @@ function IjinItiran() {
           <div className="ijin-sintyoku"><p>60%</p></div>
           <div className="ijin-name"><p>奈良時代</p></div>
           <div className="ijin-yajirusi">
-            <Link to="/Ijin"><p>&gt;</p></Link>
+            <Link to="#"><p>&gt;</p></Link>
           </div>
         </div>
 
@@ -34,7 +34,7 @@ function IjinItiran() {
           <div className="ijin-sintyoku"><p>40%</p></div>
           <div className="ijin-name"><p>安土・桃山時代</p></div>
           <div className="ijin-yajirusi">
-            <Link to="./Ijin"><p>&gt;</p></Link>
+            <Link to="/Ijin"><p>&gt;</p></Link>
           </div>
         </div>
       </section>

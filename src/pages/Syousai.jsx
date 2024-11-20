@@ -27,7 +27,7 @@ const Syousai = () => {
                 </div>
 
                 <div className="nenpyou-itiran">
-                    <Nenpyou event="1534年 出生" link="#" marked />
+                    <Nenpyou event="1534年 出生" link="/IllustGet" marked />
                     <Nenpyou event="1547年 初陣" link="#" />
                     <Nenpyou event="1554年 清州城に移転" link="#" marked />
                     <Nenpyou event="1582年 本能寺の変" link="#" marked />

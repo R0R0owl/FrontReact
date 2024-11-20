@@ -2,6 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Detailed  = () => {
+    const date = {
+        name:"織田信長",
+        event:"本能寺の変",
+        year:"1582年",
+        acquisitionDate: "2024/11/20", // 動的な取得日
+        imageSrc: "./src/assets/img/honnouji.jpg"
+    }
+
+    // ページを再読み込みする関数
+    const handleReload = () => {
+        window.location.reload();
+    };
+    
     return (
         <main>
             <section className="illust-syousai">
@@ -17,18 +30,18 @@ const Detailed  = () => {
 
                 <div className="illust-jouhou">
                     <div className="illust-name">
-                        <h2>織田信長</h2>
-                        <h3>1582年 本能寺の変</h3>
-                        <p>取得日 : 0000/00/00</p>
+                        <h2>{date.name}</h2>
+                        <h3>{date.year} {date.event}</h3>
+                        <p>取得日 : {date.acquisitionDate}</p>
                     </div>
                     <div className="illust-img">
-                        <img src="./src/assets/img/honnouji.jpg" alt="illust" />
+                        <img src={date.imageSrc} alt="illust" />
                     </div>
-                    <Link to="#">
-                        <div className="illust-change-button">
+                    <div className="illust-change">
+                        <button onClick={handleReload} className="illust-change-button">
                             <img src="./src/assets/img/change.png" alt="change" />
-                        </div>
-                    </Link>
+                        </button>
+                    </div>
                 </div>
             </section>
         </main>
