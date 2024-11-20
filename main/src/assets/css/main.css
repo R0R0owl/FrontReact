@@ -231,15 +231,41 @@ body {
 
 /* ijinitiran page */
 
-.ijin1,
-.ijin2,
-.ijin3 {
+.era-item {
     display: flex;
     justify-content: center;
     font-size: 19.2px;
 }
 
-.ijin-sintyoku {
+.era-progress {
+    width: 20%;
+}
+
+.era-name {
+    width: 40%;
+    text-align: center;
+}
+
+.era-arrow {
+    width: 20%;
+    text-align: right;
+}
+
+.next-link {
+    text-decoration: none;
+    color: #867666;
+}
+
+
+/* ijinitiran2 page */
+
+.ijin-item {
+    display: flex;
+    justify-content: center;
+    font-size: 19.2px;
+}
+
+.ijin-progress {
     width: 20%;
 }
 
@@ -248,32 +274,12 @@ body {
     text-align: center;
 }
 
-.ijin-yajirusi {
+.ijin-arrow {
     width: 20%;
     text-align: right;
 }
 
-.ijin1 a,
-.ijin2 a,
-.ijin3 a {
-    text-decoration: none;
-    color: #867666;
-}
-
-
-/* ijinitiran2 page */
-
-.ijin-name1,
-.ijin-name2,
-.ijin-name3 {
-    display: flex;
-    justify-content: center;
-    font-size: 19.2px;
-}
-
-.ijin-name1 a,
-.ijin-name2 a,
-.ijin-name3 a {
+.next-link {
     text-decoration: none;
     color: #867666;
 }

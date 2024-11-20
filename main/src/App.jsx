@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Sinkitouroku from "./pages/Sinkitouroku";
 import Newtop from "./pages/Newtop";
 import Ijinitiran from "./pages/Ijinitiran";
+import Ijinitiran2 from "./pages/Ijinitiran2";
+import Ijinsyousai from "./pages/Ijinsyousai";
 import { Forecast } from "./pages/Forecast";
 
 import './App.css'
@@ -22,6 +24,8 @@ function App() {
           <Route path="/sinkitouroku" element={<Sinkitouroku />} />
           <Route path="/newtop" element={<Newtop />} />
           <Route path="/ijinitiran" element={<Ijinitiran />} />
+          <Route path="/ijinitiran2/:eraId" element={<Ijinitiran2 />} />
+          <Route path="/ijinsyousai" element={<Ijinsyousai />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/forecast" element={<Forecast />} />
         </Route>
