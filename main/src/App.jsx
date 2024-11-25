@@ -9,9 +9,10 @@ import Newtop from "./pages/Newtop";
 import Ijinitiran from "./pages/Ijinitiran";
 import Ijinitiran2 from "./pages/Ijinitiran2";
 import Ijinsyousai from "./pages/Ijinsyousai";
+// import Map from "./pages/Map";
 import { Forecast } from "./pages/Forecast";
-
 import './App.css'
+import PersonList from "./pages/Ijinitiran2";
 
 function App() {
 
@@ -24,8 +25,9 @@ function App() {
           <Route path="/sinkitouroku" element={<Sinkitouroku />} />
           <Route path="/newtop" element={<Newtop />} />
           <Route path="/ijinitiran" element={<Ijinitiran />} />
-          <Route path="/ijinitiran2/:eraId" element={<Ijinitiran2 />} />
-          <Route path="/ijinsyousai" element={<Ijinsyousai />} />
+          <Route path="/ijinitiran2/:eraId" element={<PersonList />} />
+          <Route path="/ijinsyousai/:eraId/:personId" element={<Ijinsyousai />} />
+          {/* <Route path="/map/:eventId" element={<Map />}></Route> */}
           <Route path="/counter" element={<Counter />} />
           <Route path="/forecast" element={<Forecast />} />
         </Route>

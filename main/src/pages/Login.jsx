@@ -8,24 +8,29 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const ERROR_MESSAGES = {
+        invalidEmail: '有効なメールアドレスを入力してください',
+        invalidCredentials: 'メールアドレスかパスワードが違います',
+    };
     const navigate = useNavigate();  // react-router-domのuseNavigationフックを使用
 
-    // フォーム送信時の処理
+    // ログインフォームの送信処理
     const handleSubmit = (e) => {
-        e.preventDefault();  // ページ遷移を防ぐ
+        e.preventDefault();  // ページのリロードを防止
 
+        // メールアドレスの簡易バリデーション
         if (!email.includes('@')) {
-            setErrorMessage('有効なメールアドレスを入力してください');
+            setErrorMessage(ERROR_MESSAGES.invalidEmail);
             return;
         }
 
-        // ログイン処理(ここでは仮の処理として、ログイン成功時に遷移)
+        // 仮の認証処理
         if (email === '22jz0104@jec.ac.jp' && password === 'password') {
             setErrorMessage('');  // エラーをリセット
             navigate('/newtop');
         }
         else {
-            setErrorMessage('メールアドレスかパスワードが違います');
+            setErrorMessage(ERROR_MESSAGES.invalidCredentials);
         }
     };
 
@@ -43,8 +48,9 @@ function Login() {
             <div className="login-container">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="mail" id='mail'>メールアドレス</label><br />
-                        <input type="email" id="mail-address" name="mail-address" value={email} 
+                        <label htmlFor="mail-address" id='mail'>メールアドレス</label><br />
+                        <input type="email" id="mail-address" name="mail-address" value={email}
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
                         onChange={(e) => setEmail(e.target.value)} required />
                     </div>
                     <div className="form-group">
@@ -52,7 +58,11 @@ function Login() {
                             <input type="password" id="password" name="password" value={password}
                             onChange={(e) => setPassword(e.target.value)} required />
                     </div>
-                    {errorMessage && <p className='error-message'>{errorMessage}</p>}
+                    {errorMessage && (
+                        <p className='error-message'>
+                            {errorMessage}
+                        </p>
+                    )}
                     <div className="login">
                             <button id="login" type="submit">ログイン</button>
                     </div>

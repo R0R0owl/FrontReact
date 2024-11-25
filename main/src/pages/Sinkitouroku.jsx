@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import returnImg from '../assets/img/return.png';
 
 function RegisterPage() {
     // フォームデータを管理するステート
@@ -12,18 +13,41 @@ function RegisterPage() {
 
     // エラーメッセージを管理するステート
     const [errors, setErrors] = useState({});
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     // フォームの入力変更を処理
     const handleChange = (e) => {
         const { name, value } = e.target;
+
+        // 入力データを更新
         setFormData((prevData) => ({
             ...prevData,
             [name]: value,
         }));
 
-        // バリデーションをリアルタイムで実行する場合
-        // const newErrors = validateForm({ ...formData, [name]: value});
-        // setErrors(newErrors);
+        // 入力変更に応じてリアルタイムでバリデーション
+        const fieldError = validateField(name,value);
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: fieldError,
+        }));
+    };
+
+    // 個別フィールドのバリデーション
+    const validateField = (name, value) => {
+        switch (name) {
+            case 'username':
+                return value ? '' : 'ユーザーネームは必須です。';
+            case 'email':
+                return /\S+@\S+\.\S+/.test(value) ? '' : '有効なメールアドレスを入力してください。';
+            case 'password':
+                return value.length >= 6 ? '' : 'パスワードは6文字以上で入力してください。';
+            case 'confirmPassword':
+                return value === formData.password ? '' : 'パスワードが一致しません。';
+            default:
+                return '';
+        }
     };
 
     // フォームの送信処理
@@ -37,7 +61,7 @@ function RegisterPage() {
             console.log('フォームが送信されました:', formData);
 
             // 登録処理後、ログインページにリダイレクト
-            Navigate('/login');
+            navigate('/login');
 
             // ここでAPI呼び出しなどを行う
         }
@@ -88,27 +112,51 @@ function RegisterPage() {
                     <form onSubmit={handleSubmit}>  {/* フォームタグを追加し、onSubmitで送信 */}
                         <div className="tourokujouhou">
                             <label htmlFor="username" id="touroku-name">ユーザネーム</label><br />
-                            <input type="text" id="username" name="username" 
-                            value={formData.username} onChange={handleChange} required /><br />
-                            {errors.username && <span className='error'>{errors.username}</span>}
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                value={formData.username} 
+                                onChange={handleChange} 
+                                required 
+                            /><br />
+                            {errors.username && <span className='error' aria-live='assertive'>{errors.username}</span>}
                         </div>
                         <div className="tourokujouhou">
                             <label htmlFor="email" id="touroku-mail">メールアドレス</label><br />
-                            <input type="email" id="email" name="email" 
-                            value={formData.email} onChange={handleChange} required /><br />
-                            {errors.email && <span className="error">{errors.email}</span>}
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                value={formData.email} 
+                                onChange={handleChange} 
+                                required 
+                            /><br />
+                            {errors.email && <span className="error" aria-live='assertive'>{errors.email}</span>}
                         </div>
                         <div className="tourokujouhou">
                             <label htmlFor="password" id="touroku-pass">パスワード</label><br />
-                            <input type="password" id="password" name="password" 
-                            value={formData.password} onChange={handleChange} required /><br />
-                            {errors.password && <span className='error'>{errors.password}</span>}
+                            <input 
+                                type={showPassword ? 'text' : 'password'} 
+                                id="password" 
+                                name="password" 
+                                value={formData.password} 
+                                onChange={handleChange} 
+                                required 
+                                /><br />
+                            {errors.password && <span className='error' aria-live='assertive'>{errors.password}</span>}
                         </div>
                         <div className="tourokujouhou">
                             <label htmlFor="confirmPassword" id="kakunin-pass">パスワード(確認)</label><br />
-                            <input type="password" id="confirmPassword" name="confirmPassword" 
-                            value={formData.confirmPassword} onChange={handleChange} required /><br />
-                            {errors.confirmPassword && <span className='error'>{errors.confirmPassword}</span>}
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                value={formData.confirmPassword} 
+                                onChange={handleChange} 
+                                required 
+                                /><br />
+                            {errors.confirmPassword && <span className='error' aria-live='assertive'>{errors.confirmPassword}</span>}
                         </div>
 
                         <div className="touroku">

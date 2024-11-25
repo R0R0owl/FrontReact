@@ -15,7 +15,7 @@ const personDetails = {
                 { year: '0000年', event: 'あ' },
                 { year: '0000年', event: 'あ' }
             ],
-            imageUrl: 'あ',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         },
         2: {
             name: '応神天皇',
@@ -23,12 +23,12 @@ const personDetails = {
             death: '0000年',
             description: '応神天皇は、日本の第15代天皇です。治世中に朝鮮半島との交流や軍事的な成功があり、平和で安定した時代を築いたとされています。応神天皇は日本の皇室の礎を築いたとされ、その子孫が後の天皇に続くことから、重要な歴史的人物とされています。',
             events: [
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' }
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' }
             ],
-            imageUrl: '',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         },
     },
     2:{
@@ -38,25 +38,25 @@ const personDetails = {
             death: '0000年',
             description: '',
             events: [
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' }
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' }
             ],
-            imageUrl: '',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         },
         2: {
             name: '行基',
             birth: '0000年',
             death: '0000年',
-            description: '',
+            description: 'あ',
             events: [
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' }
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' }
             ],
-            imageUrl: '',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         },
     },
     3: {
@@ -71,40 +71,40 @@ const personDetails = {
                 { year: '1554年', event: '清州城に移転' },
                 { year: '1582年', event: '本能寺の変' }
             ],
-            imageUrl: 'src/assets/img/odanobunaga.jpg',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         },
         2: {
             name: '豊臣秀吉',
             birth: '1537年',
             death: '1598年',
             description: '豊臣秀吉は、織田信長の家臣から天下人に上りつめ、戦国三英傑の一人として知られています。彼は合戦での発想豊かな戦術や、家族・家臣との人間関係にまつわる逸話が多く、茶の湯や花見など後世の日本文化にも影響を与えました。また、名刀収集家としても有名で、太刀「一期一振藤四郎」を一之箱に収め、後に徳川家に渡り宮内庁に管理されています。',
-            event:[
+            events:[
                 { year: '1537年', event: '出生' },
                 { year: '1570年', event: '金ヶ崎の戦い' },
                 { year: '1583年', event: '大阪城を築く' },
                 { year: '1584年', event: '小牧・長久手の戦い' },
             ],
-            imageUrl: 'src/assets/img/toyotomihideyosi.jpg',
+            imageUrl: '/src/assets/img/toyotomihideyosi.jpg',
         },
         3: {
             name: '徳川家康',
             birth: '0000年',
             death: '0000年',
-            description: '',
+            description: 'あ',
             events: [
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' },
-                { year: '0000年', event: '' }
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' },
+                { year: '0000年', event: 'あ' }
             ],
-            imageUrl: '',
+            imageUrl: '/src/assets/img/odanobunaga.jpg',
         }
     }
 };
 
 const Ijinsyousai = () => {
     const { eraId, personId } = useParams();  // URLからeraIdとpersonIdを取得
-    const person = personDetails[eraId]?.[personId];  // 偉人の詳細データを取得
+    const person = personDetails[Number(eraId)]?.[Number(personId)];  // 偉人の詳細データを取得
 
     if (!person) {
         return (
@@ -122,7 +122,7 @@ const Ijinsyousai = () => {
                 <div className="page-title">
                     <div className="return">
                         <Link to={`/ijinitiran2/${eraId}`}>
-                            <img src="src/assets/img/return.png" alt="偉人一覧画面に戻る" />
+                            <img src="/src/assets/img/return.png" alt="偉人一覧画面に戻る" />
                         </Link>
                     </div>
                     <h2 id="page-title">{person.name}</h2>
@@ -130,7 +130,7 @@ const Ijinsyousai = () => {
 
                 <div className="syousai-jouhou">
                     <div className="ijin-image">
-                        <img src={person.imageUrl} alt="ijin-image" />
+                        <img src={person.imageUrl} alt={`${person.name}の画像`} />
                     </div>
                     <div className="ijin-description">
                         <p>{person.description}</p>
@@ -143,7 +143,7 @@ const Ijinsyousai = () => {
                             <div className="clear-mark">{event.year === '1534年' ? '★' : ''}</div>
                             <div className="event">{event.year} {event.event}</div>
                             <div className="nenpyou-yajirusi">
-                                <Link to="#">
+                                <Link to="#" >
                                     <p>&gt;</p>
                                 </Link>
                             </div>

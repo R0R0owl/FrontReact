@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import titleImg from '../assets/img/title.png';
+import titleImg from '/src/assets/img/title.png';
 
 function MainMenu() {
   return (
