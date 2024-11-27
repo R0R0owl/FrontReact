@@ -503,13 +503,6 @@ body {
   }
   
   
-  .syutoku-text {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-  }
-  
-
 #ai {
     background-image: url(src/assets/img/tya2.jpg);
 }
@@ -625,6 +618,7 @@ body {
     background-color: #F5F5F5;
     border: 8px solid #867666;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 #quiz-question {
@@ -649,4 +643,18 @@ body {
     padding: 5px 10px;
     border-radius: 50px;
 }
-
+/* エラーメッセージ */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error-message h2 {
+    font-size: 24px;
+  }
+  
+  .error-message p {
+    font-size: 18px;
+  }
+  
