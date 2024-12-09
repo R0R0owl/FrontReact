@@ -12,7 +12,7 @@ const IllustGet = () => {
         <main>
             <section className="illust-get">
                 <div className="hakken-text">
-                    <p>スポットを発見しました！</p>
+                    <p>スポットを発見しました！ </p>
                 </div>
                 <div className="hakken-date">
                     <div className="hakken-name">
