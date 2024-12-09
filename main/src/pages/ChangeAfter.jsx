@@ -6,18 +6,18 @@ const ChangeAfter = () => {
     const navigate = useNavigate();
     const { transformedImage } = location.state || {};
 
+    const handleSave = () => {
+        alert("画像を保存しました！");
+        navigate("/change", { state: { image: transformedImage } });  // 保存後に元の画面に戻るときにstateを渡す
+    };
+
     if (!transformedImage) {
         return (
             <div>
                 <p>画像がありません。</p>
-                <Link to="/">戻る</Link>
+                <Link to="/ai">戻る</Link>
             </div>
         );
-    }
-
-    const handleSave = () => {
-        alert("画像を保存しました！");
-        navigate("/change");  // 保存後に元の画面に戻る
     }
 
     return (
@@ -26,8 +26,8 @@ const ChangeAfter = () => {
                 <div className="change-after-title">
                     <div className="ch-after-title">
                         <div className="return2">
-                            <Link to="/change">
-                                <img src="assets/img/return.png" alt="return" />
+                            <Link to="/change" state={{ image: transformedImage }}>
+                                <img src="src/assets/img/return.png" alt="return" />
                             </Link>
                         </div>
                     </div>
