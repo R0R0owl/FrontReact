@@ -2,21 +2,22 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 
 // 各ページコンポーネントをインポート
-import Home from "./pages/Home";
-import About from "./pages/About";
 import Map from "./pages/Map";
+import Layout from "./pages/Layout";
+import Login from "./pages/Login";
+import Main from "./pages/Main";
 
 const App = () => {
   // useRoutesでルート設定
   const routes = [
-    { path: "/", element: <Home /> },
-    { path: "/about", element: <About /> },
-    { path: "/map", element: <Map /> }
+    { path: "/", element: <Layout /> },
+    { path: "/login", element: <Login /> },
+    { path: "/main", element: <Main /> }
   ];
 
-  const routing = useRoutes(routes);  // useRoutesを使用してルーティングを作成
+  const routing = useRoutes(routes); // useRoutesを使用してルーティングを作成
 
-  return routing;
+  return <>{routing}</>; // Reactコンポーネントを返す
 };
 
 export default App;

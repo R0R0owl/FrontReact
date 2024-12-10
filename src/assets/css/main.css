@@ -1,0 +1,755 @@
+@charset "utf-8";
+
+/* 基本設定 */
+
+body {
+    background-image: url(../img/haikei2.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #867666;
+    margin: 0;
+    padding: 0;
+}
+
+.title-background {
+    background-image: url(../img/haikei2.jpg);
+    border: 5px solid #867666;
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px 25px;
+}
+
+.title-box {
+    position: relative;
+}
+
+.title {
+    padding: 3em;
+    justify-content: center;
+}
+
+#title {
+    width: 200px;
+    padding-left: 10px;
+}
+
+.title-box:before,
+.title-box:after {
+    content: "";
+    width: 4em;
+    height: 4em;
+    position: absolute;
+}
+
+.title-box::before {
+    border-top: 2px solid #867666;
+    border-left: 2px solid #E1B80D;
+}
+
+.title-box::after {
+    border-bottom: 2px solid #867666;
+    border-right: 2px solid #E1B80D;
+    right: 0;
+    bottom: 0;
+}
+
+.title-box h1 {
+    color: #867666;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+  
+.title-box h1:first-letter {
+    font-size: 1.4em;
+    color: #E1B80D;
+}
+
+.return {
+    margin: 30px 20px 0 0;
+}
+
+.return img {
+    width: 25px;
+}
+
+.page-title {
+    display: flex;
+    padding: 0 0 0 20px;
+    margin: 60px 20px;
+    border-top: 5px solid #867666;
+    border-bottom: 5px solid #867666;
+}
+
+#page-title {
+    margin: 0 0 0 20px;
+    padding: 20px 0;
+}
+
+.page-title h2:first-letter {
+    font-size: 1.4em;
+    color: #867666;
+}
+
+
+/* top page */
+
+.form-group {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#mail {
+    padding: 5px 20px;
+    border-bottom: 1px solid #867666;
+}
+
+#mail-address {
+    margin: 20px 0;
+}
+
+#pass {
+    padding: 5px 20px;
+    border-bottom: 1px solid #867666;
+}
+
+#password {
+    margin: 20px 0;
+}
+
+.error-message {
+    text-align: center;
+}
+
+.login {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#login {
+    border: none;
+    width: 30%;
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+#sinki {
+    border: none;
+    width: 30%;
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+.sinki-container {
+    text-align: center;
+}
+
+
+/* sinkitouroku page */
+
+.sinkitouroku {
+    margin: 150px 0 20px 0;
+}
+
+#tourokujouhou {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#touroku-name,
+#touroku-mail,
+#touroku-pass,
+#kakunin-pass {
+    padding: 5px 20px;
+    border-bottom: 1px solid #867666;
+}
+
+#username,
+#email,
+#password,
+#confirmPassword {
+    margin: 20px 0;
+}
+
+.error {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.touroku {
+    margin: 30px 0;
+}
+
+#touroku {
+    border: none;
+    width: 30%;
+    padding: 12px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+
+/* newtop page */
+
+.new-title-section {
+    margin: 150px 20px 80px 20px;
+}
+
+.main-menu-back {
+    margin: 80px 20px 0 20px;
+    padding: 40px 0;
+}
+
+#ijin-button,
+#irasuto-button,
+#quiz-button,
+#henkan-button {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+.ijin-button,
+.irasuto-button,
+.quiz-button,
+.henkan-button {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* ijinitiran page */
+
+.era-item {
+    display: flex;
+    justify-content: center;
+    font-size: 19.2px;
+}
+
+.era-progress {
+    width: 20%;
+}
+
+.era-name {
+    width: 40%;
+    text-align: center;
+}
+
+.era-arrow {
+    width: 20%;
+    text-align: right;
+}
+
+.next-link {
+    text-decoration: none;
+    color: #867666;
+}
+
+
+/* ijinitiran2 page */
+
+.ijin-item {
+    display: flex;
+    justify-content: center;
+    font-size: 19.2px;
+}
+
+.ijin-progress {
+    width: 20%;
+}
+
+.ijin-name {
+    width: 40%;
+    text-align: center;
+}
+
+.ijin-arrow {
+    width: 20%;
+    text-align: right;
+}
+
+.next-link {
+    text-decoration: none;
+    color: #867666;
+}
+
+
+/* ijinsyousai page */
+
+.syousai-jouhou {
+    padding: 36px 40px 20px 40px;
+    margin: 0 20px;
+    border: 2px solid #867666;
+    text-align: center;
+}
+
+.ijin-description {
+    text-align: left;
+}
+
+.nenpyou-itiran {
+    margin: 20px 0 50px 0;
+}
+
+.nenpyou1,
+.nenpyou2,
+.nenpyou3,
+.nenpyou4 {
+    display: flex;
+    justify-content: center;
+    font-size: 19.2px;
+}
+
+.nenpyou1 a,
+.nenpyou2 a,
+.nenpyou3 a,
+.nenpyou4 a {
+    text-decoration: none;
+    color: #867666;
+}
+
+.clear-mark {
+    width: 18%;
+    margin: 1em 0;
+}
+
+.event {
+    margin: 1em 0;
+    width: 44%;
+    text-align: center;
+}
+
+.nenpyou-yajirusi {
+    width: 18%;
+    text-align: right;
+}
+
+
+/* illustget page */
+
+.illust-get {
+    text-align: center;
+    margin: 160px 0;
+}
+
+.hakken-text {
+    margin: 0 0 60px 0;
+    font-size: 19.2px;
+}
+
+.hakken-text p {
+    margin: 0;
+}
+
+.hakken-name h1 {
+    margin: 10px;
+    font-size: 3em;
+}
+
+.hakken-event h2 {
+    margin: 10px;
+    font-size: 2em;
+}
+
+.get-button {
+    margin: 310px 0 0 0;
+}
+
+#get-button {
+    width: 50%;
+    border: none;
+    padding: 20px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+
+/* illustget2 page */
+
+.syutoku-text {
+    text-align: center;
+    margin: 160px 0;
+}
+
+
+/* illustkakunin page */
+
+.return2 a img {
+    margin: 80px 0 0 40px;
+    width: 25px;
+}
+
+.get-img-name {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.get-img-name h2,
+.get-img-name h3,
+.get-img-name p {
+    margin: 10px;
+}
+
+.get-img-name h2 {
+    font-size: 2em;
+}
+
+.get-img-name h3 {
+    font-size: 1.5em;
+}
+
+.get-img-name p {
+    font-size: 19.2px;
+}
+
+.get-img img {
+    width: 330px;
+    padding: 20px;
+    border: 2px solid #867666;
+    margin: 10px 0 40px 0;
+}
+
+.get-img {
+    text-align: center;
+}
+
+#kyouyu-button,
+#ai-button,
+#home-button,
+#irasutoitiran-button {
+    width: 80%;
+    border: none;
+    padding: 20px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+.kyouyu-button,
+.ai-button,
+.home-button,
+.irasutoitiran-button {
+    width: 100%;
+}
+
+.joudan-menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.joudan-menu {
+    margin: 0 0 20px 0;
+}
+
+.home-button,
+.irasutoitiran-button {
+    width: 50%;
+    text-align: center;
+}
+
+.gedan-menu {
+    display: flex;
+}
+
+
+/* illustitiran page */
+
+.illust-itiran {
+    margin: 0 0 60px 0;
+}
+
+.il-ijin {
+    margin: 60px 20px 0 20px;
+}
+
+.il-ijin h3 {
+    font-size: 1.6em;
+    text-align: left;
+    margin: 0 0 10px 0;
+    padding-left: 20px;
+    border-bottom: 2px solid #867666;
+}
+
+.il-illust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.il-img img {
+    width: 100px;
+    padding: 10px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+#ai {
+    background-image: url(../img/tya2.jpg);
+}
+
+
+/* illustsyousai page */
+
+.illust-name {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.illust-name h2,
+.illust-name h3,
+.illust-name p {
+    margin: 10px;
+}
+
+.illust-name h2 {
+    font-size: 2em;
+}
+
+.illust-name h3 {
+    font-size: 1.5em;
+}
+
+.illust-name p {
+    font-size: 19.2px;
+}
+
+.illust-img img {
+    width: 330px;
+    padding: 20px;
+    border: 2px solid #867666;
+    margin: 10px 0 40px 0;
+}
+
+.illust-img {
+    text-align: center;
+}
+
+.illust-change-button {
+    width: 30%;
+    padding: 20px;
+    margin: 0 30px 0 auto;
+    background-color: #867666;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* change page */
+
+.ch-illust-name {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.ch-illust-name h2,
+.ch-illust-name h3,
+.ch-illust-name p {
+    margin: 10px;
+}
+
+.ch-illust-name h2 {
+    font-size: 2em;
+}
+
+.ch-illust-name h3 {
+    font-size: 1.5em;
+}
+
+.ch-illust-name p {
+    font-size: 19.2px;
+}
+
+.ch-illust-img img {
+    width: 170px;
+    padding: 10px;
+    border: 2px solid #867666;
+    margin: 10px 0 0 20px;
+}
+
+.ch-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.ch-box img {
+    width: 40px;
+    padding: 75px;
+    border: 2px solid #867666;
+    margin: 0 20px 10px 0;
+}
+
+.ch-box {
+    text-align: right;
+}
+
+#change-button {
+    border: none;
+    width: 50%;
+    padding: 20px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+.ch-button {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+
+/* changeAfter page */
+
+.change-text p {
+    text-align: center;
+    margin: 80px 0;
+    font-size: 19.4px;
+}
+
+.ch-after-img {
+    text-align: center;
+}
+
+.ch-after-img img {
+    width: 330px;
+    padding: 20px;
+    border: 2px solid #867666;
+    margin: 0 0 80px 0;
+}
+
+.save-button {
+    text-align: center;
+}
+
+#save-button {
+    border: none;
+    width: 50%;
+    padding: 20px;
+    font-size: 19.2px;
+    background-color: #867666;
+    color: #EAE2D6;
+    border-radius: 5px;
+}
+
+
+/* quiz page */
+
+.quiz-hyouji-menu {
+    display: flex;
+    justify-content: right;
+}
+
+.siborikomi-button button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #867666;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+
+.siborikomi-button img {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0 0 0;
+}
+
+.junban-button button {
+    height: 40px;
+    display: flex;
+    margin: 0 10px;
+    border: 2px solid #867666;
+    border-radius: 50px;
+    background-color: #F5F5F5;
+}
+
+.junban-button p {
+    font-size: 19.2px;
+    margin: 0;
+    color: #867666;
+}
+
+#junban {
+    margin: 3px 30px;
+}
+
+#kugiri {
+    font-size: 25px;
+    margin: 3px 0;
+}
+
+#sentaku-yajirusi {
+    font-size: 20px;
+    margin: 3px 10px;
+    color: #867666;
+}
+
+.quiz-itiran {
+    margin: 20px;
+}
+
+.get-quiz {
+    background-color: #F5F5F5;
+    border: 8px solid #867666;
+    border-radius: 5px;
+}
+
+#quiz-question {
+    font-size: 1.1em;
+    margin: 20px 20px 0 20px;
+}
+
+#quiz-answer {
+    font-size: 1em;
+    text-align: right;
+    margin: 0 20px 20px 20px;
+}
+
+.quiz-tag {
+    display: flex;
+    justify-content: right;
+}
+
+.quiz-tag p {
+    margin: 0 20px 20px 0;
+    background-color: #EAE2D6;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
