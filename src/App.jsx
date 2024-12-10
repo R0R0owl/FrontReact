@@ -6,6 +6,10 @@ import Map from "./pages/Map";
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Main from "./pages/Main";
+import Register from "./pages/Register";
+import Greatlist from "./pages/Greatlist";
+import Greatdata from "./pages/Greatdata";
+import Greatdetail from "./pages/Greatdetail";
 
 const App = () => {
   // useRoutesでルート設定
@@ -14,6 +18,11 @@ const App = () => {
     { path: "/", element: <Layout /> },
     { path: "/login", element: <Login /> },
     { path: "/main", element: <Main /> },
+    { path: "/register", element: <Register /> },
+    { path: "/greatlist", element: <Greatlist /> },
+    { path: "/greatdata/:eraId", element: <Greatdata /> },
+    { path: "/greatdetail/:eraId/:personId", element: <Greatdetail /> },
+    { path: "/map", element: <Map /> },
 
 
     //エラーページ

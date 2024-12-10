@@ -70,7 +70,7 @@ function Login() {
             </div>
             <div className="sinki-container">
                 <button id="sinki" type="button"
-                onClick={() => navigate('/sinkitouroku')}  // 新規登録ページへ遷移
+                onClick={() => navigate('/register')}  // 新規登録ページへ遷移
                 >新規登録</button>
             </div> 
         </main>

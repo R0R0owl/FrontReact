@@ -18,7 +18,7 @@ function MainMenu() {
       <div className="main-menu-back">
         <div className="main-menu1">
           <div className="ijin-button">
-            <Link to="/ijinitiran">
+            <Link to="/Greatlist">
               <button id="ijin-button" type="button">偉人一覧</button>
             </Link>
           </div>
