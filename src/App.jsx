@@ -10,9 +10,14 @@ import Main from "./pages/Main";
 const App = () => {
   // useRoutesでルート設定
   const routes = [
+    // "/"Layoutは存在しない、Login画面が一番最初だからrouteをどうするか
     { path: "/", element: <Layout /> },
     { path: "/login", element: <Login /> },
-    { path: "/main", element: <Main /> }
+    { path: "/main", element: <Main /> },
+
+
+    //エラーページ
+    { path: "*", element: <div>ページが見つかりません</div> }
   ];
 
   const routing = useRoutes(routes); // useRoutesを使用してルーティングを作成
