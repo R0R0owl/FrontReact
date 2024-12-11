@@ -143,7 +143,7 @@ const Ijinsyousai = () => {
                             <div className="clear-mark">{event.year === '1534年' ? '★' : ''}</div>
                             <div className="event">{event.year} {event.event}</div>
                             <div className="nenpyou-yajirusi">
-                                <Link to="#" >
+                                <Link to="/map" >
                                     <p>&gt;</p>
                                 </Link>
                             </div>

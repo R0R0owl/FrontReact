@@ -23,7 +23,7 @@ function MainMenu() {
             </Link>
           </div>
           <div className="irasuto-button">
-            <Link to="/illustitiran">
+            <Link to="/illustlist">
               <button id="irasuto-button" type="button">イラスト一覧</button>
             </Link>
           </div>

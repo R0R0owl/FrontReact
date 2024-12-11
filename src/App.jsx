@@ -10,6 +10,8 @@ import Register from "./pages/Register";
 import Greatlist from "./pages/Greatlist";
 import Greatdata from "./pages/Greatdata";
 import Greatdetail from "./pages/Greatdetail";
+import Illustrationlist from "./pages/Illustrationlist";
+import Illustdetail from "./pages/Illustdetail";
 
 const App = () => {
   // useRoutesでルート設定
@@ -23,6 +25,9 @@ const App = () => {
     { path: "/greatdata/:eraId", element: <Greatdata /> },
     { path: "/greatdetail/:eraId/:personId", element: <Greatdetail /> },
     { path: "/map", element: <Map /> },
+    { path: "/illustlist", element: <Illustrationlist /> },
+    { path: "/illustdetail", element: <Illustdetail /> },
+
 
 
     //エラーページ
