@@ -311,110 +311,168 @@ header {
 }
 
 
-/* ijinitiran page */
+/* Greatlist page */
 
 .era-item {
     display: flex;
-    justify-content: center;
-    font-size: 19.2px;
-}
-
-.era-progress {
-    width: 20%;
+    justify-content: space-between;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #787878;
+    border-radius: 20px;
+    margin: 20px;
+    letter-spacing: 3px;
 }
 
 .era-name {
-    width: 40%;
+    width: 80%;
     text-align: center;
 }
 
 .era-arrow {
     width: 20%;
-    text-align: right;
+    margin: 1.2em;
+}
+
+.era-arrow {
+    width: 15px;
 }
 
 .next-link {
     text-decoration: none;
-    color: #867666;
+    color: #787878;
 }
 
 
-/* ijinitiran2 page */
+/* Greatdata page */
 
 .ijin-item {
     display: flex;
     justify-content: center;
-    font-size: 19.2px;
-}
-
-.ijin-progress {
-    width: 20%;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #787878;
+    border-radius: 20px;
+    margin: 20px;
+    letter-spacing: 3px;
 }
 
 .ijin-name {
-    width: 40%;
+    width: 80%;
     text-align: center;
 }
 
 .ijin-arrow {
     width: 20%;
-    text-align: right;
+    margin: 1.2em 0;
+}
+
+.ijin-arrow img {
+    width: 15px;
 }
 
 .next-link {
     text-decoration: none;
-    color: #867666;
+    color: #787878;
 }
 
 
-/* ijinsyousai page */
+/* Greatdetail page */
 
 .syousai-jouhou {
-    padding: 36px 40px 20px 40px;
+    padding: 36px 30px 20px 30px;
     margin: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid #867666;
     text-align: center;
 }
 
-.ijin-description {
+.ijin-description h2 {
+    margin: 10px 0;
+}
+
+.ijin-description p {
     text-align: left;
+    margin: 10px 20px;
+    color: #787878;
+    text-shadow: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .nenpyou-itiran {
     margin: 20px 0 50px 0;
 }
 
-.nenpyou1,
-.nenpyou2,
-.nenpyou3,
-.nenpyou4 {
-    display: flex;
+.nenpyou {
     justify-content: center;
-    font-size: 19.2px;
+    font-size: 1.3em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #787878;
+    border-radius: 20px;
+    margin: 20px;
+    letter-spacing: 3px;
+    position: relative;
 }
 
-.nenpyou1 a,
-.nenpyou2 a,
-.nenpyou3 a,
-.nenpyou4 a {
-    text-decoration: none;
-    color: #867666;
+.timeline-info {
+    display: flex;
+    width: 100%;
 }
 
 .clear-mark {
-    width: 18%;
-    margin: 1em 0;
+    width: 15%;
+    margin: 1.2em 0 1em 0;
 }
 
 .event {
     margin: 1em 0;
-    width: 44%;
+    width: 70%;
     text-align: center;
+    cursor: pointer;
+}
+
+.event-detail {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
 }
 
 .nenpyou-yajirusi {
-    width: 18%;
+    position: absolute;
+    left: 86%;
+    top: 1.3em;
+}
+
+.nenpyou-yajirusi img {
+    width: 15px;
+}
+
+.event-detail.visible {
+    display: block;
+    text-shadow: none;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #787878;
+    margin: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.map-arrow {
+    text-decoration: none;
+    color: #787878;
     text-align: right;
+    font-size: large;
+}
+
+.map-arrow p {
+    border-bottom: 2px solid #787878;
 }
 
 

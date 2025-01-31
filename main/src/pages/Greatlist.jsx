@@ -20,28 +20,42 @@ function Period() {
     }, []);
 
     return (
-        <section className="ijin-list">
-            <div className="page-title">
-                <div className="return">
-                    <Link to="/main">
-                        <img src="src/assets/img/return.png" alt="newtopに戻る" />
-                    </Link>
-                </div>
-                <h2 id="page-title">いじん検索</h2>
-            </div>
-            {value.map((article) => (
-                <div key={article.id} className={`era-item era-${article.id}`}>
-                    <div className='era-name'>
-                        <p>{article.name}</p>
+        <body>
+            <header>
+                <div class="above-line"></div>
+                <div class="above-doubleline"></div>
+            </header>
+
+            <main>
+                <section className="ijin-list">
+                    <div className="page-title">
+                        <div className="return">
+                            <Link to="/main">
+                                <img src="/src/assets/img/return.png" alt="newtopに戻る" />
+                            </Link>
+                        </div>
+                        <h2 id="page-title">いじん検索</h2>
                     </div>
-                    <div className='era-arrow'>
-                        <Link to={`/greatdata/${article.id}`} className='next-link'>
-                            <p>&gt;</p>
-                        </Link>
-                    </div>
-                </div>
-            ))}
-        </section>
+                    {value.map((article) => (
+                        <div key={article.id} className={`era-item era-${article.id}`}>
+                            <div className='era-name'>
+                                <p>{article.name}</p>
+                            </div>
+                            <div className='era-arrow'>
+                                <Link to={`/greatdata/${article.id}`} className='next-link'>
+                                    <img src="/src/assets/img/right.png" class="down" alt="偉人一覧表示" />
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+            </main>
+
+            <footer>
+                <div class="bottom-doubleline"></div>
+                <div class="bottom-line"></div>
+            </footer>
+        </body>
     );
 }
 

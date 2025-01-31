@@ -8,6 +8,7 @@ const GreatDetail = () => {
   const { eraId } = useParams();
   const [persons, setPersons] = useState([]);
   const [eventData, setEventData] = useState(null); // eventDataを格納するステート
+  const [visibleDetails, setVisibleDetails] = useState({}); // 各イベントの開閉状態を管理
 
   const url = `http://127.0.0.1:8000/api/event?great_id=${personId}`;
   const prompturl = `http://127.0.0.1:8000/api/prompt?event_id=${eventId}`;
@@ -46,7 +47,7 @@ const GreatDetail = () => {
 
   return (
     <main>
-      <section className="ijin-syousai">
+      <section className="Greatdetail">
         <div className="page-title">
           <div className="return">
             <Link to={`/greatdata/${eraId}`}>
@@ -65,19 +66,26 @@ const GreatDetail = () => {
                     <img src={person.imageUrl} alt={`${person.name}の画像`} />
                   </div>
                   <div className="ijin-description">
+                    <h2>{person.name}</h2>
                     <p>{person.description}</p>
                   </div>
                 </div>
 
                 <div className="nenpyou-itiran">
                   <div className="nenpyou">
-                    <div className="clear-mark">
-                      {person.year === '1534年' ? '★' : ''}
-                    </div>
-                    <div className="event">
-                      {person.year} {person.event}
+                    <div className='timeline-info'>
+                      <div className="clear-mark">
+                        {person.year === '1534年' ? '★' : ''}
+                      </div>
+                      <div className="event">
+                        {person.year} {person.event}
+                      </div>
                     </div>
                     <div className="nenpyou-yajirusi">
+                      <img src="/src/assets/img/down" className='down' alt="イベント詳細表示" />
+                    </div>
+                    <div className='event-detail'>
+                      <p>{person.event}</p>
                       {/* Linkのstateプロパティで緯度経度を渡す */}
                       <Link
                         to={`/map/${person.id}/${person.eventId}`} // eventIdを渡す
@@ -85,8 +93,9 @@ const GreatDetail = () => {
                           lat: parseFloat(person.lat),
                           lng: parseFloat(person.lon),
                         }}
+                        className='map-arrow'
                       >
-                        <p>マップ</p>
+                        <p>map➡</p>
                       </Link>
                     </div>
                   </div>

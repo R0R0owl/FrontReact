@@ -21,32 +21,43 @@ const Greatdata = () => {
     console.log("Persons data:", persons);
 
     return (
-        <section className="person-data">
-            <div className="page-title">
-                <div className="return">
-                    <Link to="/greatlist">
-                        <img src="/src/assets/img/return.png" alt="時代一覧画面に戻る" />
-                    </Link>
-                </div>
-                <h2 id="page-title">偉人データ</h2>
-            </div>
-            {persons.length === 0 ? (
-                <p>この時代の偉人データはありません。</p>
-            ) : (
-                persons.map((person) => (
-                    <div key={person.id} className="ijin-item">
-                        <div className="ijin-name">
-                            <p>{person.name}</p>
-                        </div>
-                        <div className="ijin-arrow">
-                            <Link to={`/greatdetail/${eraId}/${person.id}`} className="next-link">
-                                <p>&gt;</p>
+        <body>
+            <header>
+                <div class="above-line"></div>
+                <div class="above-doubleline"></div>
+            </header>
+        
+            <main>
+                <section className="person-data">
+                    <div className="page-title">
+                        <div className="return">
+                            <Link to="/greatlist">
+                                <img src="/src/assets/img/return.png" alt="時代一覧画面に戻る" />
                             </Link>
                         </div>
+                        <h2 id="page-title">いじん検索</h2>
                     </div>
-                ))
-            )}
-        </section>
+                    {persons.length === 0 ? (
+                        <p>この時代の偉人データはありません。</p>
+                    ) : (
+                        persons.map((person) => (
+                            <div key={person.id} className="ijin-item">
+                                <div className="ijin-name">
+                                    <p>{person.name}</p>
+                                </div>
+                                <div className="ijin-arrow">
+                                    <Link to={`/greatdetail/${eraId}/${person.id}`} className="next-link">
+                                        <img src="/src/assets/img/right.png" class="down" alt="偉人詳細表示" />
+                                    </Link>
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </section>
+            </main>
+
+            <footer></footer>
+        </body>
     );
 };
 
